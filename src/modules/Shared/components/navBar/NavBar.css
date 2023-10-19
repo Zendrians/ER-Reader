@@ -1,0 +1,29 @@
+.navBar {
+    display: grid;
+    background-color: var(--mid-background-color);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 40px;
+}
+
+.navBar__logo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: var(--font-size-h2);
+    column-gap: 10px;
+}
+
+.navBar__tile {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 28px 1fr;
+    font-size: var(--font-size-h2);
+}
+
+.navBar__bookName {
+    font-style: italic;
+    font-size: 14px;
+}
+
+

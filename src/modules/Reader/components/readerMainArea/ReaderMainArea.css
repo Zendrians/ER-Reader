@@ -1,0 +1,23 @@
+.readerMainArea {
+    display: flex;
+    justify-content: center;
+}
+
+.readerMainArea__readingPanel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 98%;
+    width: 840px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+.readerMainArea__readingPanel p {
+    color: #D4D4D4;
+    font-size: 1.2rem;
+    line-height: 1.15;
+}
+
