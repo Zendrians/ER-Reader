@@ -3,6 +3,10 @@ import "./ReaderMainArea.css";
 import RightSidePanel from "../../../Shared/components/rightSidePanel/RightSidePanel";
 import PanelIcon from "../../../Shared/components/panelIcon/PanelIcon";
 import CharacterIcon from "../../../../assets/reactSvg/CharacterIcon";
+import LocationIcon from "../../../../assets/reactSvg/LocationIcon";
+import MusicIcon from "../../../../assets/reactSvg/MusicIcon";
+import OpenBookIcon from "../../../../assets/reactSvg/OpenBookIcon";
+import ChatBubbleIcon from "../../../../assets/reactSvg/ChatBubbleIcon";
 
 const ReaderMainArea: React.FC = () => {
   return (
@@ -45,7 +49,16 @@ const ReaderMainArea: React.FC = () => {
             <CharacterIcon />
           </PanelIcon>
           <PanelIcon>
-            <CharacterIcon />
+            <LocationIcon />
+          </PanelIcon>
+          <PanelIcon>
+            <MusicIcon />
+          </PanelIcon>
+          <PanelIcon>
+            <OpenBookIcon />
+          </PanelIcon>
+          <PanelIcon>
+            <ChatBubbleIcon />
           </PanelIcon>
         </RightSidePanel>
       </div>
