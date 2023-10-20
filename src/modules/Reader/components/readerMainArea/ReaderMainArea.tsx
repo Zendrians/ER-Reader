@@ -1,12 +1,6 @@
 import React from "react";
 import "./ReaderMainArea.css";
-import RightSidePanel from "../../../Shared/components/rightSidePanel/RightSidePanel";
-import PanelIcon from "../../../Shared/components/panelIcon/PanelIcon";
-import CharacterIcon from "../../../../assets/reactSvg/CharacterIcon";
-import LocationIcon from "../../../../assets/reactSvg/LocationIcon";
-import MusicIcon from "../../../../assets/reactSvg/MusicIcon";
-import OpenBookIcon from "../../../../assets/reactSvg/OpenBookIcon";
-import ChatBubbleIcon from "../../../../assets/reactSvg/ChatBubbleIcon";
+import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
 
 const ReaderMainArea: React.FC = () => {
   return (
@@ -44,23 +38,7 @@ const ReaderMainArea: React.FC = () => {
         </p>
       </div>
       <div className="readerMainArea__righSidePanelContainer">
-        <RightSidePanel>
-          <PanelIcon>
-            <CharacterIcon />
-          </PanelIcon>
-          <PanelIcon>
-            <LocationIcon />
-          </PanelIcon>
-          <PanelIcon>
-            <MusicIcon />
-          </PanelIcon>
-          <PanelIcon>
-            <OpenBookIcon />
-          </PanelIcon>
-          <PanelIcon>
-            <ChatBubbleIcon />
-          </PanelIcon>
-        </RightSidePanel>
+        <SelectionCorner />
       </div>
     </section>
   );
