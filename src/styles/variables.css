@@ -1,7 +1,10 @@
 :root {
+  --accent-color: #FDD60C;
+
   /* backgrounds */
   --deeper-background-color: #000000;
   --deep-background-color: #121212;
+  --shallow-background-color: #1E1E1E;
   --mid-background-color: #323233;
 
   /* fonts */

@@ -1,6 +1,7 @@
 .readerMainArea {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    justify-items: center;
 }
 
 .readerMainArea__readingPanel {
@@ -19,5 +20,11 @@
     color: #D4D4D4;
     font-size: 1.2rem;
     line-height: 1.15;
+}
+
+.readerMainArea__righSidePanelContainer {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
 }
 

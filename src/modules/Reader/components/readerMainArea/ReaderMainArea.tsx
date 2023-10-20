@@ -1,9 +1,13 @@
 import React from "react";
 import "./ReaderMainArea.css";
+import RightSidePanel from "../../../Shared/components/rightSidePanel/RightSidePanel";
+import PanelIcon from "../../../Shared/components/panelIcon/PanelIcon";
+import CharacterIcon from "../../../../assets/reactSvg/CharacterIcon";
 
 const ReaderMainArea: React.FC = () => {
   return (
     <section className="readerMainArea">
+      <div>A</div>
       <div className="readerMainArea__readingPanel">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -34,6 +38,16 @@ const ReaderMainArea: React.FC = () => {
           consequat facilisis. Sed posuere, sem sit amet finibus porttitor,
           tellus lorem fringilla diam, vitae tincidunt urna arcu quis nunc.
         </p>
+      </div>
+      <div className="readerMainArea__righSidePanelContainer">
+        <RightSidePanel>
+          <PanelIcon>
+            <CharacterIcon />
+          </PanelIcon>
+          <PanelIcon>
+            <CharacterIcon />
+          </PanelIcon>
+        </RightSidePanel>
       </div>
     </section>
   );
