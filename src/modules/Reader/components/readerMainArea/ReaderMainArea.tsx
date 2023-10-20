@@ -1,11 +1,17 @@
 import React from "react";
 import "./ReaderMainArea.css";
 import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
+import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
+import ReaderInfoBar from "../readerInfoBar/ReaderInfoBar";
 
 const ReaderMainArea: React.FC = () => {
   return (
     <section className="readerMainArea">
-      <div>A</div>
+      <div className="readerMainArea__sidePanelContainer">
+        <SelectionCorner orientation="right">
+          <ReaderInfoBar />
+        </SelectionCorner>
+      </div>
       <div className="readerMainArea__readingPanel">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -37,8 +43,10 @@ const ReaderMainArea: React.FC = () => {
           tellus lorem fringilla diam, vitae tincidunt urna arcu quis nunc.
         </p>
       </div>
-      <div className="readerMainArea__righSidePanelContainer">
-        <SelectionCorner />
+      <div className="readerMainArea__sidePanelContainer">
+        <SelectionCorner orientation="left">
+          <ReaderFeaturesBar />
+        </SelectionCorner>
       </div>
     </section>
   );

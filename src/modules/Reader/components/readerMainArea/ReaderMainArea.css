@@ -22,7 +22,7 @@
     line-height: 1.15;
 }
 
-.readerMainArea__righSidePanelContainer {
+.readerMainArea__sidePanelContainer {
     display: flex;
     align-content: center;
     flex-wrap: wrap;

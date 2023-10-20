@@ -1,35 +1,18 @@
-import React from "react";
-import PanelIcon from "../panelIcon/PanelIcon";
-import CharacterIcon from "../../../../assets/reactSvg/CharacterIcon";
-import LocationIcon from "../../../../assets/reactSvg/LocationIcon";
-import MusicIcon from "../../../../assets/reactSvg/MusicIcon";
-import OpenBookIcon from "../../../../assets/reactSvg/OpenBookIcon";
-import ChatBubbleIcon from "../../../../assets/reactSvg/ChatBubbleIcon";
-
+import React, { ReactNode } from "react";
 import "./SelectionCorner.css";
 
-// interface IRightSidePanel {
-//   children: Array<ReactNode>;
-// }
+interface ISelectionCorner {
+  children: ReactNode;
+  orientation: "left" | "right";
+}
 
-const SelectionCorner: React.FC = () => {
+const SelectionCorner: React.FC<ISelectionCorner> = ({
+  orientation,
+  children,
+}) => {
   return (
-    <div className="rightSidePanel">
-      <PanelIcon>
-        <CharacterIcon />
-      </PanelIcon>
-      <PanelIcon>
-        <LocationIcon />
-      </PanelIcon>
-      <PanelIcon>
-        <MusicIcon />
-      </PanelIcon>
-      <PanelIcon>
-        <OpenBookIcon />
-      </PanelIcon>
-      <PanelIcon>
-        <ChatBubbleIcon />
-      </PanelIcon>
+    <div className={`selectionCorner selectionCorner--${orientation}`}>
+      {children}
     </div>
   );
 };

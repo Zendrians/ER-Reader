@@ -1,17 +1,24 @@
-.rightSidePanel {
+.selectionCorner {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   padding: 10px;
   row-gap: 10px;
-  height: 300px;
   width: 50px;
   background-color: var(--shallow-background-color);
+}
+
+.selectionCorner--left {
   border-radius: 10px 0 0 10px;
   -webkit-box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
   box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
 }
 
-
+.selectionCorner--right {
+  border-radius: 0 10px 10px 0;
+  -webkit-box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
+  box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
+}
