@@ -1,0 +1,7 @@
+.panelIcon {
+    color: var(--icon-inactive-color);
+}
+
+.panelIcon:hover {
+    color: var(--accent-color);
+}

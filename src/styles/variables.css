@@ -1,4 +1,5 @@
 :root {
+  --primary-color: #ffffff;
   --accent-color: #FDD60C;
 
   /* backgrounds */
@@ -12,4 +13,7 @@
   --reder-font-colot: #E3E3E3;
 
   --font-size-h2: 18px;
+
+  /* icons */
+  --icon-inactive-color: #B2B2B2;
 }
