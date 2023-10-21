@@ -14,7 +14,7 @@ const ReaderMainArea: React.FC = () => {
     <React.Fragment>
       <section id="readerMainArea" className="readerMainArea">
         <div className="readerMainArea__sidePanelContainer">
-          <SelectionCorner orientation="right">
+          <SelectionCorner orientation="left">
             <ReaderInfoBar />
           </SelectionCorner>
         </div>
@@ -50,7 +50,7 @@ const ReaderMainArea: React.FC = () => {
           </p>
         </div>
         <div className="readerMainArea__sidePanelContainer">
-          <SelectionCorner orientation="left">
+          <SelectionCorner orientation="right">
             <ReaderFeaturesBar />
           </SelectionCorner>
         </div>

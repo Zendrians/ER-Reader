@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import ReaderSidePanel from "../readerSidePanel/ReaderSidePanel";
 import "./ReaderInfoPanelContainer.css";
 import ReaderInfoBar from "../readerInfoBar/ReaderInfoBar";
@@ -10,7 +10,7 @@ const ReaderInfoPanelContainer: React.FC = () => {
   return (
     <aside className="readerInfoPanelContainer">
       <ReaderSidePanel />
-      <SelectionCorner orientation="right">
+      <SelectionCorner orientation="left">
         <ReaderInfoBar />
       </SelectionCorner>
     </aside>
