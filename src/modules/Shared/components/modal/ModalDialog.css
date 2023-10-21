@@ -1,10 +1,20 @@
 .modalDialog {
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+
+  animation: slide-left-to-right 500ms ease-in forwards;
+}
+
+@keyframes slide-left-to-right {
+  0% {
+    left: -500px;
+  }
+  100% {
     left: 0px;
-    transform: translateY(-50%);
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-    border: none;
+  }
 }
