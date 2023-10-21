@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./ReaderMainArea.css";
 import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
 import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
 import ReaderInfoBar from "../readerInfoBar/ReaderInfoBar";
 import ModalDialog from "../../../Shared/components/modal/ModalDialog";
 import ReaderInfoPanelContainer from "../ReaderInfoPanelContainer/ReaderInfoPanelContainer";
-import PanelContextProvider, { PanelContext } from "../../context/PanelContext";
+import PanelContextProvider from "../../context/PanelContext";
 
 const ReaderMainArea: React.FC = () => {
   
