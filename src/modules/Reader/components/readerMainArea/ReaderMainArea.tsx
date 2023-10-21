@@ -8,15 +8,17 @@ import ReaderInfoPanelContainer from "../ReaderInfoPanelContainer/ReaderInfoPane
 import { PanelContext } from "../../context/PanelContext";
 
 const ReaderMainArea: React.FC = () => {
-  const { isOpen } = useContext(PanelContext);
+  const { isPanelOpen } = useContext(PanelContext);
 
   return (
     <React.Fragment>
       <section id="readerMainArea" className="readerMainArea">
         <div className="readerMainArea__sidePanelContainer">
-          <SelectionCorner orientation="left">
-            <ReaderInfoBar />
-          </SelectionCorner>
+          {!isPanelOpen && (
+            <SelectionCorner orientation="left">
+              <ReaderInfoBar />
+            </SelectionCorner>
+          )}
         </div>
         <div className="readerMainArea__readingPanel">
           <p>
@@ -55,7 +57,7 @@ const ReaderMainArea: React.FC = () => {
           </SelectionCorner>
         </div>
       </section>
-      <ModalDialog isOpen={isOpen}>
+      <ModalDialog isOpen={isPanelOpen}>
         <ReaderInfoPanelContainer />
       </ModalDialog>
     </React.Fragment>

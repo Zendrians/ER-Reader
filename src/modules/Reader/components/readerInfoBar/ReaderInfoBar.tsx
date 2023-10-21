@@ -10,7 +10,7 @@ const ReaderInfoBar: React.FC = () => {
 
   const handleIconClick = (panelOptions: PanelState) => {
     if (panelOptions.currentTab === currentTab) {
-      updatePanel({ isOpen: false, orientation: "right", currentTab: null });
+      updatePanel({ isPanelOpen: false, orientation: "right", currentTab: null });
     } else {
       updatePanel(panelOptions);
     }
@@ -22,7 +22,7 @@ const ReaderInfoBar: React.FC = () => {
         isSelected={currentTab === ReaderTabs.BookData}
         onClick={() => {
           handleIconClick({
-            isOpen: true,
+            isPanelOpen: true,
             orientation: "right",
             currentTab: ReaderTabs.BookData,
           });
@@ -34,7 +34,7 @@ const ReaderInfoBar: React.FC = () => {
         isSelected={currentTab === ReaderTabs.ChapterList}
         onClick={() => {
           handleIconClick({
-            isOpen: true,
+            isPanelOpen: true,
             orientation: "right",
             currentTab: ReaderTabs.ChapterList,
           });
