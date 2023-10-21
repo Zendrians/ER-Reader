@@ -1,16 +1,19 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { useContext } from "react";
 import PanelIcon from "../../../Shared/components/panelIcon/PanelIcon";
 import NoteBookIcon from "../../../../assets/reactSvg/NoteBookIcon";
 import ListIcon from "../../../../assets/reactSvg/ListIcon";
+import { PanelContext } from "../../context/PanelContext";
 
-interface IReaderInfoBar {
-  setIsRightPanelOpen: Dispatch<SetStateAction<boolean>>
-}
+const ReaderInfoBar: React.FC = () => {
+  const { updatePanel } = useContext(PanelContext);
 
-const ReaderInfoBar: React.FC<IReaderInfoBar> = ({setIsRightPanelOpen}) => {
   return (
     <React.Fragment>
-      <PanelIcon onClick={() => {setIsRightPanelOpen(true)}}>
+      <PanelIcon
+        onClick={() => {
+          updatePanel({ isOpen: true, orientation: "right" });
+        }}
+      >
         <NoteBookIcon />
       </PanelIcon>
       <PanelIcon>

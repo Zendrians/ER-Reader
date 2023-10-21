@@ -1,20 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./ReaderMainArea.css";
 import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
 import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
 import ReaderInfoBar from "../readerInfoBar/ReaderInfoBar";
 import ModalDialog from "../../../Shared/components/modal/ModalDialog";
-import ReaderSidePanel from "../readerSidePanel/ReaderSidePanel";
+import ReaderInfoPanelContainer from "../ReaderInfoPanelContainer/ReaderInfoPanelContainer";
+import PanelContextProvider, { PanelContext } from "../../context/PanelContext";
 
 const ReaderMainArea: React.FC = () => {
-  const [isRighPanelOpen, setIsRightPanelOpen] = useState(false);
+  
 
   return (
-    <React.Fragment>
+    <PanelContextProvider>
       <section id="readerMainArea" className="readerMainArea">
         <div className="readerMainArea__sidePanelContainer">
           <SelectionCorner orientation="right">
-            <ReaderInfoBar setIsRightPanelOpen={setIsRightPanelOpen} />
+            <ReaderInfoBar />
           </SelectionCorner>
         </div>
         <div className="readerMainArea__readingPanel">
@@ -54,18 +55,10 @@ const ReaderMainArea: React.FC = () => {
           </SelectionCorner>
         </div>
       </section>
-      <ModalDialog isOpen={isRighPanelOpen}>
-        <ReaderSidePanel />
-        <button
-          style={{ color: "white" }}
-          onClick={() => {
-            setIsRightPanelOpen(false);
-          }}
-        >
-          X
-        </button>
+      <ModalDialog >
+        <ReaderInfoPanelContainer />
       </ModalDialog>
-    </React.Fragment>
+    </PanelContextProvider>
   );
 };
 

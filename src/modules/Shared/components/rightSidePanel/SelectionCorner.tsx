@@ -8,7 +8,7 @@ interface ISelectionCorner {
 
 const SelectionCorner: React.FC<ISelectionCorner> = ({
   orientation,
-  children,
+  children
 }) => {
   return (
     <div className={`selectionCorner selectionCorner--${orientation}`}>

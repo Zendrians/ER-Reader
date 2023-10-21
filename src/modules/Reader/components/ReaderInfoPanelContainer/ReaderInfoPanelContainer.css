@@ -1,0 +1,5 @@
+.readerInfoPanelContainer {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+}
