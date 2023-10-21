@@ -21,8 +21,21 @@
   border-radius: 0 10px 10px 0;
   -webkit-box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);
-  box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);  
+  
+  
+}
 
+.selectionCorner--animation--left {
+  animation: selection-corner-left-to-right 500ms ease-in forwards;
 }
 
 
+@keyframes selection-corner-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform:  translateX(0)
+  }
+}

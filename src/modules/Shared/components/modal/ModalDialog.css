@@ -7,10 +7,10 @@
   background-color: transparent;
   border: none;
 
-  animation: slide-left-to-right 500ms ease-in forwards;
+  animation: modal-slide-left-to-right 500ms ease-in forwards;
 }
 
-@keyframes slide-left-to-right {
+@keyframes modal-slide-left-to-right {
   0% {
     left: -500px;
   }
