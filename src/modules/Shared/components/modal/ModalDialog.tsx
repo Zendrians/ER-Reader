@@ -1,14 +1,13 @@
-import React, { ReactNode, useContext } from "react";
+import React, { ReactNode } from "react";
 import ReactDOM from "react-dom";
 import "./ModalDialog.css";
-import { PanelContext } from "../../../Reader/context/PanelContext";
 
 interface IModalDialog {
+  isOpen: boolean;
   children: ReactNode;
 }
 
-const ModalDialog: React.FC<IModalDialog> = ({ children }) => {
-  const { isOpen } = useContext(PanelContext);
+const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
@@ -20,7 +19,7 @@ const ModalDialog: React.FC<IModalDialog> = ({ children }) => {
     >
       {children}
     </dialog>,
-    document.getElementById("readerMainArea") ?? document.body
+    document.getElementById('readerMainArea') ?? document.body
   );
 };
 

@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ReaderMainArea.css";
 import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
 import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
 import ReaderInfoBar from "../readerInfoBar/ReaderInfoBar";
 import ModalDialog from "../../../Shared/components/modal/ModalDialog";
 import ReaderInfoPanelContainer from "../ReaderInfoPanelContainer/ReaderInfoPanelContainer";
-import PanelContextProvider from "../../context/PanelContext";
+import { PanelContext } from "../../context/PanelContext";
 
 const ReaderMainArea: React.FC = () => {
-  
+  const { isOpen } = useContext(PanelContext);
 
   return (
-    <PanelContextProvider>
+    <React.Fragment>
       <section id="readerMainArea" className="readerMainArea">
         <div className="readerMainArea__sidePanelContainer">
           <SelectionCorner orientation="right">
@@ -55,10 +55,10 @@ const ReaderMainArea: React.FC = () => {
           </SelectionCorner>
         </div>
       </section>
-      <ModalDialog >
+      <ModalDialog isOpen={isOpen}>
         <ReaderInfoPanelContainer />
       </ModalDialog>
-    </PanelContextProvider>
+    </React.Fragment>
   );
 };
 
