@@ -1,0 +1,10 @@
+.modalDialog {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}

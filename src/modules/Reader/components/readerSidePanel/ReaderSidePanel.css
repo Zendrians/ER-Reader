@@ -1,0 +1,6 @@
+.readerSidePanel {
+    height: 700px;
+    width: 350px;
+    background-color: var(--deep-background-color);
+    border-radius: 20px;
+}

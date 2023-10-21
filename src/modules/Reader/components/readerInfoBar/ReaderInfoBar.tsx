@@ -1,12 +1,16 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import PanelIcon from "../../../Shared/components/panelIcon/PanelIcon";
 import NoteBookIcon from "../../../../assets/reactSvg/NoteBookIcon";
 import ListIcon from "../../../../assets/reactSvg/ListIcon";
 
-const ReaderInfoBar: React.FC = () => {
+interface IReaderInfoBar {
+  setIsRightPanelOpen: Dispatch<SetStateAction<boolean>>
+}
+
+const ReaderInfoBar: React.FC<IReaderInfoBar> = ({setIsRightPanelOpen}) => {
   return (
     <React.Fragment>
-      <PanelIcon>
+      <PanelIcon onClick={() => {setIsRightPanelOpen(true)}}>
         <NoteBookIcon />
       </PanelIcon>
       <PanelIcon>
