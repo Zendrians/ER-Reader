@@ -1,10 +1,13 @@
 import { ReactNode, createContext, useState } from "react";
-
+import { ReaderTabs } from "../enums/RedarTabs";
 interface IPanelContext {
   orientation: "right" | "left";
   isOpen: boolean;
+  currentTab: ReaderTabs | null;
   updatePanel: (newValues: Omit<IPanelContext, "updatePanel">) => void;
 }
+
+type PanelState = Omit<IPanelContext, "updatePanel">;
 
 interface IPanelContextProvider {
   children: ReactNode;
@@ -13,17 +16,20 @@ interface IPanelContextProvider {
 export const PanelContext = createContext<IPanelContext>({
   orientation: "right",
   isOpen: false,
+  currentTab: null,
   updatePanel: () => {},
 });
 
 const PanelContextProvider: React.FC<IPanelContextProvider> = ({
   children,
 }) => {
-  const [panelState, setPanelState] = useState<
-    Omit<IPanelContext, "updatePanel">
-  >({ isOpen: false, orientation: "right" });
+  const [panelState, setPanelState] = useState<PanelState>({
+    isOpen: false,
+    orientation: "right",
+    currentTab: null,
+  });
 
-  const handlePanelUpdate = (newValues: Omit<IPanelContext, "updatePanel">) => {
+  const handlePanelUpdate = (newValues: PanelState) => {
     setPanelState(newValues);
   };
 
@@ -32,6 +38,7 @@ const PanelContextProvider: React.FC<IPanelContextProvider> = ({
       value={{
         isOpen: panelState.isOpen,
         orientation: panelState.orientation,
+        currentTab: panelState.currentTab,
         updatePanel: handlePanelUpdate,
       }}
     >
