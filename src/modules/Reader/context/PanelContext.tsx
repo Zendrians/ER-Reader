@@ -7,7 +7,7 @@ interface IPanelContext {
   updatePanel: (newValues: Omit<IPanelContext, "updatePanel">) => void;
 }
 
-type PanelState = Omit<IPanelContext, "updatePanel">;
+export type PanelState = Omit<IPanelContext, "updatePanel">;
 
 interface IPanelContextProvider {
   children: ReactNode;
