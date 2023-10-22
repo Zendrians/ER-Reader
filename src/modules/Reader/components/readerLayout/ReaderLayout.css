@@ -4,5 +4,4 @@
     grid-template-rows: 50px auto;
     row-gap: 20px;
     background-color: var(--deeper-background-color);
-    overflow: hidden;
 }

@@ -1,15 +1,22 @@
 .modalDialog {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: sticky;
   padding: 0;
   margin: 0;
   background-color: transparent;
   border: none;
 }
 
-.modalDialog__animation--slideFromLeft {
+.modalDialog--left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   animation: modal-slide-left-to-right 500ms ease-in forwards;
+}
+
+.modalDialog--right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50%;
 }
 
 @keyframes modal-slide-left-to-right {

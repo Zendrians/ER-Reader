@@ -5,10 +5,10 @@ import "./ModalDialog.css";
 interface IModalDialog {
   isOpen: boolean;
   children: ReactNode;
-  animation: string
+  position: string
 }
 
-const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, animation }) => {
+const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
@@ -16,7 +16,7 @@ const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, animation }) =>
       open
       aria-modal="true"
       aria-labelledby="dialog-title"
-      className={`modalDialog modalDialog__animation--${animation}`}
+      className={`modalDialog modalDialog--${position}`}
     >
       {children}
     </dialog>,
