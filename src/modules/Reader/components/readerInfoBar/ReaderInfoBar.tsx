@@ -6,11 +6,11 @@ import { PanelContext, PanelState } from "../../context/PanelContext";
 import { ReaderTabs } from "../../enums/RedarTabs";
 
 const ReaderInfoBar: React.FC = () => {
-  const { currentTab, updatePanel } = useContext(PanelContext);
+  const { currentLeftTab, updatePanel } = useContext(PanelContext);
 
   const handleIconClick = (panelOptions: Partial<PanelState>) => {
-    if (panelOptions.currentTab === currentTab) {
-      updatePanel({ isLeftPanelOpen: false, currentTab: null });
+    if (panelOptions.currentLeftTab === currentLeftTab) {
+      updatePanel({ isLeftPanelOpen: false, currentLeftTab: null });
     } else {
       updatePanel(panelOptions);
     }
@@ -19,22 +19,22 @@ const ReaderInfoBar: React.FC = () => {
   return (
     <React.Fragment>
       <PanelIcon
-        isSelected={currentTab === ReaderTabs.BookData}
+        isSelected={currentLeftTab === ReaderTabs.BookData}
         onClick={() => {
           handleIconClick({
             isLeftPanelOpen: true,
-            currentTab: ReaderTabs.BookData,
+            currentLeftTab: ReaderTabs.BookData,
           });
         }}
       >
         <NoteBookIcon />
       </PanelIcon>
       <PanelIcon
-        isSelected={currentTab === ReaderTabs.ChapterList}
+        isSelected={currentLeftTab === ReaderTabs.ChapterList}
         onClick={() => {
           handleIconClick({
             isLeftPanelOpen: true,
-            currentTab: ReaderTabs.ChapterList,
+            currentLeftTab: ReaderTabs.ChapterList,
           });
         }}
       >

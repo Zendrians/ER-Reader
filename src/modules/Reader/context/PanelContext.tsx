@@ -3,7 +3,8 @@ import { ReaderTabs } from "../enums/RedarTabs";
 interface IPanelContext {
   isLeftPanelOpen: boolean;
   isRightPanelOpen: boolean;
-  currentTab: ReaderTabs | null;
+  currentLeftTab: ReaderTabs | null;
+  currentRightTab: ReaderTabs | null;
   updatePanel: (newPanelStateValues: Partial<PanelState>) => void;
 }
 
@@ -16,7 +17,8 @@ interface IPanelContextProvider {
 export const PanelContext = createContext<IPanelContext>({
   isLeftPanelOpen: false,
   isRightPanelOpen: false,
-  currentTab: null,
+  currentLeftTab: null,
+  currentRightTab: null,
   updatePanel: () => {},
 });
 
@@ -26,7 +28,8 @@ const PanelContextProvider: React.FC<IPanelContextProvider> = ({
   const [panelState, setPanelState] = useState<PanelState>({
     isLeftPanelOpen: false,
     isRightPanelOpen: false,
-    currentTab: null,
+    currentLeftTab: null,
+    currentRightTab: null,
   });
 
   const handlePanelUpdate = (newPanelStateValues: Partial<PanelState>) => {
@@ -38,7 +41,8 @@ const PanelContextProvider: React.FC<IPanelContextProvider> = ({
       value={{
         isLeftPanelOpen: panelState.isLeftPanelOpen,
         isRightPanelOpen: panelState.isRightPanelOpen,
-        currentTab: panelState.currentTab,
+        currentLeftTab: panelState.currentLeftTab,
+        currentRightTab: panelState.currentRightTab,
         updatePanel: handlePanelUpdate,
       }}
     >
