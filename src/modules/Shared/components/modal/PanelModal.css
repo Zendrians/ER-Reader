@@ -1,6 +1,7 @@
 .panelModal {
   position: fixed;
-  top: 120px;
+  top: 50%;
+  transform: translateY(-50%);
   padding: 0;
   margin: 0;
   background-color: transparent;
