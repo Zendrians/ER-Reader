@@ -8,7 +8,7 @@ import { ReaderTabs } from "../../enums/RedarTabs";
 const ReaderInfoBar: React.FC = () => {
   const { currentTab, updatePanel } = useContext(PanelContext);
 
-  const handleIconClick = (panelOptions: PanelState) => {
+  const handleIconClick = (panelOptions: Partial<PanelState>) => {
     if (panelOptions.currentTab === currentTab) {
       updatePanel({ isLeftPanelOpen: false, currentTab: null });
     } else {
