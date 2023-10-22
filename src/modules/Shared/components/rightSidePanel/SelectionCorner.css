@@ -1,6 +1,7 @@
 .selectionCorner {
   position: sticky;
-  top: 40%;
+  top: 50%;
+  translate: 0 -50%;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -31,6 +32,7 @@
 .selectionCorner--panelOpen {
   position: static;
   animation: none;
+  translate: 0 0;
 }
 
 @keyframes selection-corner-left-to-right {
