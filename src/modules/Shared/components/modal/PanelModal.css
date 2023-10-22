@@ -10,10 +10,12 @@
 
 .panelModal--left {
   left: 0;
+  animation: modal-slide-left-to-right 300ms ease-in forwards;
 }
 
 .panelModal--right {
  right: 0;
+ animation: modal-slide-right-to-left 300ms ease-in forwards;
 }
 
 @keyframes modal-slide-left-to-right {
@@ -21,6 +23,15 @@
     left: -500px;
   }
   100% {
-    left: 300px;
+    left: 0px;
+  }
+}
+
+@keyframes modal-slide-right-to-left {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 0px;
   }
 }
