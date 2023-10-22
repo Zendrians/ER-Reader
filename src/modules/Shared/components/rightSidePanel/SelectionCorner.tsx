@@ -11,8 +11,8 @@ const SelectionCorner: React.FC<ISelectionCorner> = ({
   orientation,
   children,
 }) => {
-  const { isPanelOpen } = useContext(PanelContext);
-  const animation = !isPanelOpen
+  const { isLeftPanelOpen } = useContext(PanelContext);
+  const animation = !isLeftPanelOpen
     ? `selectionCorner--animation--${orientation}`
     : "";
 

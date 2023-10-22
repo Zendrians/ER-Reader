@@ -6,7 +6,9 @@
   margin: 0;
   background-color: transparent;
   border: none;
+}
 
+.modalDialog__animation--slideFromLeft {
   animation: modal-slide-left-to-right 500ms ease-in forwards;
 }
 
