@@ -1,24 +1,25 @@
-import React, { ReactNode, useContext } from "react";
+import React, { ReactNode } from "react";
 import "./SelectionCorner.css";
-import { PanelContext } from "../../../Reader/context/PanelContext";
+import classNames from "classnames";
 
 interface ISelectionCorner {
   children: ReactNode;
   orientation: "left" | "right";
+  isPanelOpen: boolean;
 }
 
 const SelectionCorner: React.FC<ISelectionCorner> = ({
   orientation,
   children,
+  isPanelOpen,
 }) => {
-  const { isLeftPanelOpen } = useContext(PanelContext);
-  const animation = !isLeftPanelOpen
-    ? `selectionCorner--animation--${orientation}`
-    : "";
-
   return (
     <div
-      className={`selectionCorner selectionCorner--${orientation} ${animation}`}
+      className={classNames(
+        "selectionCorner",
+        `selectionCorner--${orientation}`,
+        { "selectionCorner--panelOpen": isPanelOpen }
+      )}
     >
       {children}
     </div>
@@ -26,3 +27,5 @@ const SelectionCorner: React.FC<ISelectionCorner> = ({
 };
 
 export default SelectionCorner;
+
+// className={`selectionCorner selectionCorner--${orientation}`}

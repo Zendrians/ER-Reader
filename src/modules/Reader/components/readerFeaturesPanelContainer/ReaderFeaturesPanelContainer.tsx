@@ -7,7 +7,7 @@ import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
 const ReaderFeaturesPanelContainer: React.FC = () => {
   return (
     <aside className="readerInfoPanelContainer">
-      <SelectionCorner orientation="right">
+      <SelectionCorner orientation="right" isPanelOpen={true}>
         <ReaderFeaturesBar />
       </SelectionCorner>
       <ReaderSidePanel />

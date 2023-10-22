@@ -10,7 +10,7 @@ const ReaderInfoPanelContainer: React.FC = () => {
   return (
     <aside className="readerInfoPanelContainer">
       <ReaderSidePanel />
-      <SelectionCorner orientation="left">
+      <SelectionCorner orientation="left" isPanelOpen={true}>
         <ReaderInfoBar />
       </SelectionCorner>
     </aside>

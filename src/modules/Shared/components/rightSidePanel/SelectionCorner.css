@@ -1,7 +1,6 @@
 .selectionCorner {
   position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -14,6 +13,7 @@
 }
 
 .selectionCorner--right {
+  animation: selection-corner-right-to-left 300ms ease-in forwards;
   border-radius: 10px 0 0 10px;
   -webkit-box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: -10px 10px 6px -10px rgba(0, 0, 0, 0.6);
@@ -21,22 +21,30 @@
 }
 
 .selectionCorner--left {
+  animation: selection-corner-left-to-right 300ms ease-in forwards;
   border-radius: 0 10px 10px 0;
   -webkit-box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);
   box-shadow: 10px 10px 6px -10px rgba(0, 0, 0, 0.6);  
-  
-  
 }
 
-.selectionCorner--animation--left {
-  animation: selection-corner-left-to-right 500ms ease-in forwards;
+.selectionCorner--panelOpen {
+  position: static;
+  animation: none;
 }
-
 
 @keyframes selection-corner-left-to-right {
   0% {
     transform: translateX(-100%);
+  }
+  100% {
+    transform:  translateX(0)
+  }
+}
+
+@keyframes selection-corner-right-to-left {
+  0% {
+    transform: translateX(100%);
   }
   100% {
     transform:  translateX(0)
