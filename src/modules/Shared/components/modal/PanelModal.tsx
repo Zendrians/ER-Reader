@@ -1,21 +1,21 @@
 import React, { ReactNode } from "react";
 import ReactDOM from "react-dom";
-import "./ModalDialog.css";
+import "./PanelModal.css";
 
-interface IModalDialog {
+interface IPanelModal {
   isOpen: boolean;
   children: ReactNode;
   position: string;
 }
 
-const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position }) => {
+const PanelModal: React.FC<IPanelModal> = ({ isOpen, children, position }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
     <div
       aria-modal="true"
       aria-labelledby="dialog-title"
-      className={`modalDialog modalDialog--${position}`}
+      className={`panelModal panelModal--${position}`}
     >
       {children}
     </div>,
@@ -23,4 +23,4 @@ const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position }) => 
   );
 };
 
-export default ModalDialog;
+export default PanelModal;

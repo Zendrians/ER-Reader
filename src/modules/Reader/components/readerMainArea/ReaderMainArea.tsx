@@ -3,7 +3,7 @@ import "./ReaderMainArea.css";
 import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
 import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
 import ReaderInfoBar from "../readerInfoBar/ReaderInfoBar";
-import ModalDialog from "../../../Shared/components/modal/ModalDialog";
+import PanelModal from "../../../Shared/components/modal/PanelModal";
 import ReaderInfoPanelContainer from "../ReaderInfoPanelContainer/ReaderInfoPanelContainer";
 import { PanelContext } from "../../context/PanelContext";
 import ReaderFeaturesPanelContainer from "../readerFeaturesPanelContainer/ReaderFeaturesPanelContainer";
@@ -121,18 +121,18 @@ const ReaderMainArea: React.FC = () => {
           )}
         </div>
       </section>
-      <ModalDialog
+      <PanelModal
         isOpen={isLeftPanelOpen}
         position="left"
       >
         <ReaderInfoPanelContainer />
-      </ModalDialog>
-      <ModalDialog
+      </PanelModal>
+      <PanelModal
         isOpen={isRightPanelOpen}
         position="right"
       >
         <ReaderFeaturesPanelContainer />
-      </ModalDialog>
+      </PanelModal>
     </React.Fragment>
   );
 };

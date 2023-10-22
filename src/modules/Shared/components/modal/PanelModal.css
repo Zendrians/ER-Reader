@@ -1,4 +1,4 @@
-.modalDialog {
+.panelModal {
   position: fixed;
   top: 120px;
   padding: 0;
@@ -7,11 +7,11 @@
   border: none;
 }
 
-.modalDialog--left {
+.panelModal--left {
   left: 0;
 }
 
-.modalDialog--right {
+.panelModal--right {
  right: 0;
 }
 
