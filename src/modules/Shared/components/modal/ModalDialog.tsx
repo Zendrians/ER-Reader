@@ -6,22 +6,20 @@ interface IModalDialog {
   isOpen: boolean;
   children: ReactNode;
   position: string;
-  anchorElId: string;
 }
 
-const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position, anchorElId }) => {
+const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <dialog
-      open
+    <div
       aria-modal="true"
       aria-labelledby="dialog-title"
       className={`modalDialog modalDialog--${position}`}
     >
       {children}
-    </dialog>,
-    document.getElementById(anchorElId) ?? document.body
+    </div>,
+    document.getElementById("readerMainArea") ?? document.body
   );
 };
 

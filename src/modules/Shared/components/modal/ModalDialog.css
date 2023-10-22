@@ -1,18 +1,18 @@
 .modalDialog {
-  position: absolute;
-  top: 100px;
+  position: fixed;
+  top: 120px;
   padding: 0;
   margin: 0;
   background-color: transparent;
   border: none;
 }
 
-/* .modalDialog--left {
-  
-} */
+.modalDialog--left {
+  left: 0;
+}
 
 .modalDialog--right {
- transform: translateX(-100%);
+ right: 0;
 }
 
 @keyframes modal-slide-left-to-right {

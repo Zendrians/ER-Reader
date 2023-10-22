@@ -124,14 +124,12 @@ const ReaderMainArea: React.FC = () => {
       <ModalDialog
         isOpen={isLeftPanelOpen}
         position="left"
-        anchorElId="left-container"
       >
         <ReaderInfoPanelContainer />
       </ModalDialog>
       <ModalDialog
         isOpen={isRightPanelOpen}
         position="right"
-        anchorElId="right-container"
       >
         <ReaderFeaturesPanelContainer />
       </ModalDialog>
