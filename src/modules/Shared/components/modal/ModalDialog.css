@@ -1,22 +1,18 @@
 .modalDialog {
-  position: sticky;
+  position: absolute;
+  top: 100px;
   padding: 0;
   margin: 0;
   background-color: transparent;
   border: none;
 }
 
-.modalDialog--left {
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  animation: modal-slide-left-to-right 500ms ease-in forwards;
-}
+/* .modalDialog--left {
+  
+} */
 
 .modalDialog--right {
-  top: 50%;
-  transform: translateY(-50%);
-  right: 50%;
+ transform: translateX(-100%);
 }
 
 @keyframes modal-slide-left-to-right {
@@ -24,6 +20,6 @@
     left: -500px;
   }
   100% {
-    left: 0px;
+    left: 300px;
   }
 }

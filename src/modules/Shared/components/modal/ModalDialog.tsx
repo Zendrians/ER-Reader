@@ -5,10 +5,11 @@ import "./ModalDialog.css";
 interface IModalDialog {
   isOpen: boolean;
   children: ReactNode;
-  position: string
+  position: string;
+  anchorElId: string;
 }
 
-const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position }) => {
+const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position, anchorElId }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
@@ -20,7 +21,7 @@ const ModalDialog: React.FC<IModalDialog> = ({ isOpen, children, position }) => 
     >
       {children}
     </dialog>,
-    document.getElementById('readerMainArea') ?? document.body
+    document.getElementById(anchorElId) ?? document.body
   );
 };
 

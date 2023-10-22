@@ -14,7 +14,7 @@ const ReaderMainArea: React.FC = () => {
   return (
     <React.Fragment>
       <section id="readerMainArea" className="readerMainArea">
-        <div className="readerMainArea__sidePanelContainer">
+        <div id="left-container" className="readerMainArea__sidePanelContainer">
           {!isLeftPanelOpen && (
             <SelectionCorner orientation="left">
               <ReaderInfoBar />
@@ -110,16 +110,29 @@ const ReaderMainArea: React.FC = () => {
             tellus lorem fringilla diam, vitae tincidunt urna arcu quis nunc.
           </p>
         </div>
-        <div className="readerMainArea__sidePanelContainer">
-          <SelectionCorner orientation="right">
-            <ReaderFeaturesBar />
-          </SelectionCorner>
+        <div
+          id="right-container"
+          className="readerMainArea__sidePanelContainer"
+        >
+          {!isRightPanelOpen && (
+            <SelectionCorner orientation="right">
+              <ReaderFeaturesBar />
+            </SelectionCorner>
+          )}
         </div>
       </section>
-      <ModalDialog isOpen={isLeftPanelOpen} position="left">
+      <ModalDialog
+        isOpen={isLeftPanelOpen}
+        position="left"
+        anchorElId="left-container"
+      >
         <ReaderInfoPanelContainer />
       </ModalDialog>
-      <ModalDialog isOpen={isRightPanelOpen} position="right">
+      <ModalDialog
+        isOpen={isRightPanelOpen}
+        position="right"
+        anchorElId="right-container"
+      >
         <ReaderFeaturesPanelContainer />
       </ModalDialog>
     </React.Fragment>
