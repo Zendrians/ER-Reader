@@ -3,6 +3,7 @@ import ReaderSidePanel from "../readerSidePanel/ReaderSidePanel";
 import "./ReaderFeaturesPanelContainer.css";
 import SelectionCorner from "../../../Shared/components/rightSidePanel/SelectionCorner";
 import ReaderFeaturesBar from "../readerFeaturesBar/ReaderFeaturesBar";
+import CharactersPanel from "../charactersPanel/CharactersPanel";
 
 const ReaderFeaturesPanelContainer: React.FC = () => {
   return (
@@ -10,7 +11,9 @@ const ReaderFeaturesPanelContainer: React.FC = () => {
       <SelectionCorner orientation="right" isPanelOpen={true}>
         <ReaderFeaturesBar />
       </SelectionCorner>
-      <ReaderSidePanel />
+      <ReaderSidePanel>
+        <CharactersPanel />
+      </ReaderSidePanel>
     </aside>
   );
 };

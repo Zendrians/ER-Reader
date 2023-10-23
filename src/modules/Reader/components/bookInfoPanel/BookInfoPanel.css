@@ -1,0 +1,25 @@
+.bookInfoPanel {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) 2fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+.bookInfoPanel__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bookInfoPanel__contentContainer {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    row-gap: 15px;
+    padding: 10px 15px;
+}
+
+.bookInfoPanel__bookTile {
+    justify-self: center;
+    font-size: 24px;
+}
+

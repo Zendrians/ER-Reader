@@ -1,0 +1,6 @@
+.contentBox {
+    background-color: var(--mid-background-color);
+    border-radius: 10px;
+    padding: 10px 15px;
+    height: min-content;
+}
