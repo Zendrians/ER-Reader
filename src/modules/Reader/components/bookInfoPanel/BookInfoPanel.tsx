@@ -14,21 +14,37 @@ const BookInfoPanel: React.FC = () => {
       <div className="bookInfoPanel__contentContainer">
         <h3 className="bookInfoPanel__bookTile">Fantasy Book Name</h3>
         <ContentBox>
-          <p>
+          <p style={{marginBottom: "10px"}}>
             Praesent hendrerit convallis dictum. Phasellus nunc est, tristique
             id pulvinar vitae, dictum nec nulla. Mauris accumsan sapien at justo
             semper faucibus.
           </p>
-          <p>
+          <p style={{marginBottom: "10px"}}>
+            Praesent hendrerit convallis dictum. Phasellus nunc est, tristique
+            id pulvinar vitae, dictum nec nulla. Mauris accumsan sapien at justo
+            semper faucibus. Donec cursus venenatis augue sit amet malesuada.
+            Aenean hendrerit aliquam est.
+          </p>
+          <p style={{marginBottom: "10px"}}>
+            Praesent hendrerit convallis dictum. Phasellus nunc est, tristique
+            id pulvinar vitae, dictum nec nulla. Mauris accumsan sapien at justo
+            semper faucibus. Donec cursus venenatis augue sit amet malesuada.
+            Aenean hendrerit aliquam est.
+          </p>
+          <p style={{marginBottom: "10px"}}>
+            Praesent hendrerit convallis dictum. Phasellus nunc est, tristique
+            id pulvinar vitae, dictum nec nulla. Mauris accumsan sapien at justo
+            semper faucibus. Donec cursus venenatis augue sit amet malesuada.
+            Aenean hendrerit aliquam est.
+          </p>
+          <p style={{marginBottom: "10px"}}>
             Praesent hendrerit convallis dictum. Phasellus nunc est, tristique
             id pulvinar vitae, dictum nec nulla. Mauris accumsan sapien at justo
             semper faucibus. Donec cursus venenatis augue sit amet malesuada.
             Aenean hendrerit aliquam est.
           </p>
         </ContentBox>
-        <ContentBox>
-        Praesent 
-        </ContentBox>
+        <ContentBox>Author</ContentBox>
       </div>
     </div>
   );

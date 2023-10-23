@@ -139,4 +139,25 @@ input[type="reset"] {
   outline: inherit;
 }
 
+html {
+  background-color: var(--deeper-background-color);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  margin: 6px 0;
+  -webkit-border-radius: 10px;
+  background-color: transparent;
+  border-radius: var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: var(--accent-color); 
+}
+
 

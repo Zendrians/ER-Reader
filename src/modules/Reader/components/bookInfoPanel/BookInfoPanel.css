@@ -1,6 +1,6 @@
 .bookInfoPanel {
     display: grid;
-    grid-template-rows: minmax(0, 1fr) 2fr;
+    grid-template-rows: minmax(0, 2fr) 5fr;
     grid-template-columns: 1fr;
     height: 100%;
 }
@@ -16,6 +16,7 @@
     grid-template-rows: min-content 1fr min-content;
     row-gap: 15px;
     padding: 10px 15px;
+    overflow-y: hidden;
 }
 
 .bookInfoPanel__bookTile {
