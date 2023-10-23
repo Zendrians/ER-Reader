@@ -33,19 +33,59 @@ const ReaderFeaturesBar: React.FC = () => {
       >
         <CharacterIcon />
       </PanelIcon>
-      <PanelIcon>
+      <PanelIcon
+        isSelected={currentRightTab === ReaderTabs.Locations}
+        onClick={() => {
+          handleIconClick({
+            isRightPanelOpen: true,
+            currentRightTab: ReaderTabs.Locations,
+          });
+        }}
+      >
         <LocationIcon />
       </PanelIcon>
-      <PanelIcon>
+      <PanelIcon
+        isSelected={currentRightTab === ReaderTabs.Music}
+        onClick={() => {
+          handleIconClick({
+            isRightPanelOpen: true,
+            currentRightTab: ReaderTabs.Music,
+          });
+        }}
+      >
         <MusicIcon />
       </PanelIcon>
-      <PanelIcon>
+      <PanelIcon
+        isSelected={currentRightTab === ReaderTabs.Lore}
+        onClick={() => {
+          handleIconClick({
+            isRightPanelOpen: true,
+            currentRightTab: ReaderTabs.Lore,
+          });
+        }}
+      >
         <OpenBookIcon />
       </PanelIcon>
-      <PanelIcon>
+      <PanelIcon
+        isSelected={currentRightTab === ReaderTabs.Comments}
+        onClick={() => {
+          handleIconClick({
+            isRightPanelOpen: true,
+            currentRightTab: ReaderTabs.Comments,
+          });
+        }}
+      >
         <ChatBubbleIcon />
       </PanelIcon>
-      <PanelIcon>
+      <PanelIcon
+        isSelected={currentRightTab === ReaderTabs.FeedBack}
+        onClick={() => {
+          handleIconClick({
+            isRightPanelOpen: true,
+            currentRightTab: ReaderTabs.FeedBack,
+          });
+        }}
+      >
         <BugIcon />
       </PanelIcon>
     </React.Fragment>

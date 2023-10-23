@@ -1,8 +1,12 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./ReaderSidePanel.css";
 
-const ReaderSidePanel: React.FC = () => {
-  return <div className="readerSidePanel">A</div>;
+interface IReaderSidePanel {
+  children: ReactNode;
+}
+
+const ReaderSidePanel: React.FC<IReaderSidePanel> = ({ children }) => {
+  return <div className="readerSidePanel"> {children} </div>;
 };
 
 export default ReaderSidePanel;
