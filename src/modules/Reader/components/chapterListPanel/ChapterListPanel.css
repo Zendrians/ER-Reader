@@ -1,0 +1,18 @@
+.chapterListPanel {
+  display: grid;
+  grid-template-rows: minmax(0, 2fr) 5fr;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+.chapterListPanel__contentContainer {
+  padding: 15px 15px 10px;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.chapterListPanel__chaptersContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }

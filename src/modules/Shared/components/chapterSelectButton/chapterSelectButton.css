@@ -1,0 +1,8 @@
+.chapterSelectButton {
+    text-align: start;
+}
+
+.chapterSelectButton:hover {
+    text-align: start;
+    text-decoration: underline;
+}
