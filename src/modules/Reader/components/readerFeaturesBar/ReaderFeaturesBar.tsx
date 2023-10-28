@@ -45,11 +45,11 @@ const ReaderFeaturesBar: React.FC = () => {
         <LocationIcon />
       </PanelIcon>
       <PanelIcon
-        isSelected={currentRightTab === ReaderTabs.Music}
+        isSelected={currentRightTab === ReaderTabs.Sound}
         onClick={() => {
           handleIconClick({
             isRightPanelOpen: true,
-            currentRightTab: ReaderTabs.Music,
+            currentRightTab: ReaderTabs.Sound,
           });
         }}
       >

@@ -3,7 +3,7 @@ export enum ReaderTabs {
   ChapterList = "ChapterList",
   Characters = "Characters",
   Locations = "Locations",
-  Music = "Music",
+  Sound = "Sound",
   Lore = "Lore",
   Comments = "Comments",
   FeedBack = "Feedback",
