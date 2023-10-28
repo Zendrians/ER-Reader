@@ -1,5 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 import { ReaderTabs } from "../enums/RedarTabs";
+
 interface IPanelContext {
   isLeftPanelOpen: boolean;
   isRightPanelOpen: boolean;

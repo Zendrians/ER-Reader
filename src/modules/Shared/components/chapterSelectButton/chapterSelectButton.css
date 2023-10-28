@@ -1,8 +1,9 @@
 .chapterSelectButton {
     text-align: start;
+    transition: padding-left 150ms;
 }
 
 .chapterSelectButton:hover {
-    text-align: start;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    padding-left: 20px;
 }
