@@ -10,7 +10,7 @@
   row-gap: 10px;
   width: 50px;
   background-color: var(--deep-background-color);
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
 }
 
 .selectionCorner--right {

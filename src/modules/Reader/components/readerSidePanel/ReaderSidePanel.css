@@ -4,6 +4,6 @@
     background-color: var(--deep-background-color);
     border-radius: 20px;
     z-index: 10;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     overflow: clip;
 }

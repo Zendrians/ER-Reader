@@ -5,6 +5,7 @@
     overflow-y: auto;
     text-align: justify;
     max-height: 100%;
+    border: 1px solid var(--border-color);
 }
 
 .contentBox-fitContent {
