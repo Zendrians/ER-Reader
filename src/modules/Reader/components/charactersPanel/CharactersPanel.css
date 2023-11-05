@@ -10,3 +10,16 @@
   object-fit: cover;
   border-bottom: 1px solid var(--border-color);
 }
+
+.charactersPanel__contentContainer {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  row-gap: 15px;
+  padding: 15px 15px 10px;
+  overflow-y: hidden;
+}
+
+.charactersPanel__characterName {
+  font-size: 24px;
+  justify-self: center;
+}
