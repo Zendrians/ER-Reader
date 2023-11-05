@@ -1,0 +1,28 @@
+.readingZone {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  width: 840px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: justify;
+  border: 1px solid var(--border-color);
+}
+
+.readingZone--dark {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.readingZone--light {
+  background-color: #f8f8f8;
+  color: black;
+}
+
+.readingZone p {
+  font-size: 1.2rem;
+  line-height: 1.15;
+  color: inherit;
+  text-indent: 2rem;
+}

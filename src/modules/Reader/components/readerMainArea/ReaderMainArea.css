@@ -5,25 +5,6 @@
     position: relative;
 }
 
-.readerMainArea__readingPanel {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    margin-bottom: 20px;
-    width: 840px;
-    background-color: #1E1E1E;
-    border-radius: 10px;
-    padding: 10px 20px;
-    text-align: justify;
-    border: 1px solid var(--border-color);
-}
-
-.readerMainArea__readingPanel p {
-    color: #D4D4D4;
-    font-size: 1.2rem;
-    line-height: 1.15;
-}
-
 .readerMainArea__sidePanelContainer {
     width: 50px;
     position: relative;
