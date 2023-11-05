@@ -1,0 +1,21 @@
+.characterAvatar__btn {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  background-color: aliceblue;
+  border: 1px solid var(--border-color);
+  overflow: clip;
+  transition: all 0.15s;
+}
+
+.characterAvatar__btn:hover {
+    translate: 0 -5px;
+    border-color: var(--accent-color);
+    scale: 1.15;
+}
+
+.characterAvatar__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

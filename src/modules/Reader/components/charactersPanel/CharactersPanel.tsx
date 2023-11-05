@@ -1,6 +1,7 @@
 import React from "react";
 import "./CharactersPanel.css";
 import ContentBox from "../../../Shared/components/contentBox/ContentBox";
+import CharacterAvatar from "../../../Shared/components/characterAvatar/CharacterAvatar";
 
 const CharactersPanel: React.FC = () => {
   return (
@@ -30,7 +31,15 @@ const CharactersPanel: React.FC = () => {
             Aenean hendrerit aliquam est.
           </p>
         </ContentBox>
-        <ContentBox>b</ContentBox>
+        <ContentBox>
+          <div className="charactersPanel__selectionBar">
+            <CharacterAvatar />
+            <CharacterAvatar />
+            <CharacterAvatar />
+            <CharacterAvatar />
+            <CharacterAvatar />
+          </div>
+        </ContentBox>
       </div>
     </div>
   );
