@@ -26,4 +26,10 @@
     font-size: 14px;
 }
 
+.navBar__options {
+    display: flex;
+    align-content: end;
+    justify-content: end;
+}
+
 
