@@ -142,12 +142,15 @@ html {
   background-color: var(--deeper-background-color);
 }
 
+/* SCROLLBAR */
+
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  margin: 6px 0;
+  margin: 6px 6px;
   -webkit-border-radius: 10px;
   background-color: transparent;
   border-radius: var(--accent-color);

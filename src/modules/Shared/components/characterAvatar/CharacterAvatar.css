@@ -11,7 +11,7 @@
 .characterAvatar__btn:hover {
     translate: 0 -5px;
     border-color: var(--accent-color);
-    scale: 1.15;
+    scale: 1.1;
 }
 
 .characterAvatar__img {

@@ -25,8 +25,14 @@
 }
 
 .charactersPanel__selectionBar {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
 }
 
+.charactersPanel__selectionBar > * {
+  margin-right: 10px;
+}
+
+.charactersPanel__selectionBar > *:last-child {
+  margin-right: 0;
+}
