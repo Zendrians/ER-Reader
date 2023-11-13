@@ -1,0 +1,16 @@
+.editor {
+  width: 840px;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  min-height: 800px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  justify-self: center;
+}
+
+.editor:focus {
+  outline-color: var(--accent-color);
+  outline-style: solid;
+}

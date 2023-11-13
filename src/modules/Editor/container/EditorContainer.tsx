@@ -1,7 +1,8 @@
 import React from 'react';
+import EditorLayout from '../componets/editorLayout/EditorLayout';
 
 const EditorContainer: React.FC = () => {
-    return <div>Im the Editor Container</div>
+    return <EditorLayout />
 }
 
 export default EditorContainer;
