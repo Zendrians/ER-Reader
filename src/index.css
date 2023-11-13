@@ -1,3 +1,33 @@
+/* @import url('./styles/typography.css'); */
+
+@font-face {
+  font-family: "crimson";
+  src: url("./assets/fonts/CrimsonText-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "crimson";
+  src: url("./assets/fonts/CrimsonText-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "crimson";
+  src: url("./assets/fonts/CrimsonText-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "crimson";
+  src: url("./assets/fonts/CrimsonText-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -89,6 +119,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   color: var(--primary-color);
+  font-family: "crimson";
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -159,7 +190,5 @@ html {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: var(--accent-color); 
+  background: var(--accent-color);
 }
-
-
