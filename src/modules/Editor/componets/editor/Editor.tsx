@@ -1,16 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import "./Editor.css";
 
 const Editor: React.FC = () => {
+  const [editorText, setEditorText] = useState("<p>Hey you</p>");
   const editorRef = useRef(document.createElement("div"));
-  document.execCommand('defaultParagraphSeparator', false, 'p');
+  document.execCommand("defaultParagraphSeparator", false, "p");
 
   const handleBlur = () => {
-    if (editorRef === null) return;
-    editorRef.current.firstChild
-    console.log(editorRef.current.innerHTML);
+    setEditorText(editorRef.current.innerHTML);
   };
+
+  console.log(editorText);
 
   return (
     <div
@@ -19,9 +20,8 @@ const Editor: React.FC = () => {
       ref={editorRef}
       contentEditable
       className="editor"
-    >
-      Insert text here
-    </div>
+      dangerouslySetInnerHTML={{ __html: editorText }}
+    ></div>
   );
 };
 
