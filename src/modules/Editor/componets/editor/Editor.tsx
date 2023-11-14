@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import "./Editor.css";
+import { parseEditorText } from "../../../../utils/editorParser";
 
 const Editor: React.FC = () => {
   const [editorText, setEditorText] = useState("<p>Hey you</p>");
@@ -9,9 +10,8 @@ const Editor: React.FC = () => {
 
   const handleBlur = () => {
     setEditorText(editorRef.current.innerHTML);
+    parseEditorText(editorRef.current.innerHTML)
   };
-
-  console.log(editorText);
 
   return (
     <div
